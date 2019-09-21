@@ -68,7 +68,7 @@ class Experiment(TrainingAnalyzer):
         cp_callback = keras.callbacks.ModelCheckpoint(checkpoint_path, save_weights_only=True, verbose=2)
 
         history = model.fit(X_tr, y_tr,
-                            batch_size=self.MODEL_BATCH_SIZE, epochs=5, verbose=2, callbacks=[cp_callback])
+                            batch_size=self.MODEL_BATCH_SIZE, epochs=5, verbose=1, callbacks=[cp_callback])
         print(history.history)
         return history
 
@@ -151,10 +151,12 @@ class Experiment(TrainingAnalyzer):
         :return:
         """
         for experiment in self.EXPERIMENT_PLAN:
-            with create_tf_session() as tf_session:
-                train = experiment['train']
-                self._run_train(tf_session, train)
+            tf_session = create_tf_session()
+            train = experiment['train']
+            self._run_train(tf_session, train)
 
-                # test model
-                for test_dataset in experiment['test']:
-                    self._run_test(tf_session, train, test_dataset)
+            # test model
+            for test_dataset in experiment['test']:
+                self._run_test(tf_session, train, test_dataset)
+            tf_session.close()
+            break
