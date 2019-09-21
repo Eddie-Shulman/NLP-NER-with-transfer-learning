@@ -75,7 +75,8 @@ def _get_embedding_layer(tf_session, tf_batch_size, sentences, max_sentence_len,
         TENSORFLOW_HUB_ELMO_MODULE = 'https://tfhub.dev/google/elmo/2'
         EMBEDDING_VECTOR_SIZE = 1024
 
-        elmo_model = hub.Module(TENSORFLOW_HUB_ELMO_MODULE, trainable=True)
+        # turn trainable to True could improve may improve results but this is a task for future work
+        elmo_model = hub.Module(TENSORFLOW_HUB_ELMO_MODULE, trainable=False)
         tf_session.run(tf.compat.v1.global_variables_initializer())
         tf_session.run(tf.compat.v1.tables_initializer())
 
