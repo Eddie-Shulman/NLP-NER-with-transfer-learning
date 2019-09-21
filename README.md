@@ -4,12 +4,14 @@
 ## Hardware
 1. CPU i7-4720HQ
 2. 16GB of RAM
-3. NVIDIA GPU (The code was tested with NVIDIA GTX 980M)
+3. NVIDIA GPU (The code was tested with NVIDIA GTX 980M with compute capability: 5.2)
 4. 5GB of hard drive for the project and saved model weights
+5. Internet connectivity
 
 ## Software
 1. Python 3.7
 2. Pip3 19.0.3+
+3. CUDA 10 + CuDNN
 
 # Installation
 1. Create a python virtual environment for the project (not mandatory but strongly encouraged) 
@@ -45,7 +47,7 @@ as the output layer.
 2. Train and test over the BTC data-set with Elmo embedding and CRF output layer
 
 To run an experiment you'll need to uncomment it's configuration (all other experiments 
-MUST be commented out!). Then run ```python -m NERTranserLearning/ExperimentSoloTraining.py```
+MUST be commented out!). Then run ```python -m NERTranserLearning.ExperimentSoloTraining```
 from the project root. 
 
 This will trigger the training process, if the training was previously completed - the 
@@ -82,8 +84,8 @@ over the WSJ data-sets.
 over the WSJ TEST data-sets.
 
 To run an experiment you'll need to select a module (```ExperimentTransferCrfTraining or ExperimentTransferTddTraining```), uncomment it's configuration (all other experiments 
-MUST be commented out!). Then run ```python -m NERTranserLearning/ExperimentTransferCrfTraining.py``` or
-```python -m NERTranserLearning/ExperimentTransferTddTraining.py``` 
+MUST be commented out!). Then run ```python -m NERTranserLearning.ExperimentTransferCrfTraining``` or
+```python -m NERTranserLearning.ExperimentTransferTddTraining``` 
 from the project root. 
 
 This will trigger the training process, if the training was previously completed - the 
