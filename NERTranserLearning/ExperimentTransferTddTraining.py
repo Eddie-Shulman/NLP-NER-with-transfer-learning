@@ -18,7 +18,7 @@ class ExperimentTransferTddTraining(Experiment):
                 'train': {
                     'dataset': 'gmb_dataset',
                     'input_checkpoint': None,
-                    'output_checkpoint': '../trained/transfer_tdd/gmb-tdd-simple.ckpt',
+                    'output_checkpoint': 'trained/transfer_tdd/gmb-tdd-simple.ckpt',
                     'model': 'tdd_simple_embedding_model',
                     'train': 'train_tdd_output',
                     'freeze_bi_lstm': False,
@@ -29,8 +29,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb-tdd-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc_train-tdd-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb-tdd-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc_train-tdd-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -41,8 +41,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb-tdd-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb-tdd-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -53,8 +53,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter_train-tdd-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter_train-tdd-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -65,8 +65,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter-tdd-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter-tdd-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -77,8 +77,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_wsj_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter_wsj_train-tdd-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter_wsj_train-tdd-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -90,7 +90,7 @@ class ExperimentTransferTddTraining(Experiment):
             #     'train': {
             #         'dataset': 'gmb_dataset',
             #         'input_checkpoint': None,
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -101,8 +101,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb-tdd-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc_train-tdd-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc_train-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -113,8 +113,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb-tdd-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -125,8 +125,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter_train-tdd-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter_train-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -137,8 +137,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter-tdd-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,
@@ -149,8 +149,8 @@ class ExperimentTransferTddTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_wsj_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_tdd/gmb+btc+ritter_wsj_train-tdd-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_tdd/gmb+btc-tdd-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_tdd/gmb+btc+ritter_wsj_train-tdd-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_tdd_output',
             #         'freeze_bi_lstm': False,

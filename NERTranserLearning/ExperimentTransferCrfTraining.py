@@ -17,7 +17,7 @@ class ExperimentTransferCrfTraining(Experiment):
                 'train': {
                     'dataset': 'gmb_dataset',
                     'input_checkpoint': None,
-                    'output_checkpoint': '../trained/transfer_crf/gmb-crf-simple.ckpt',
+                    'output_checkpoint': 'trained/transfer_crf/gmb-crf-simple.ckpt',
                     'model': 'crf_simple_embedding_model',
                     'train': 'train_crf_output',
                     'freeze_bi_lstm': False,
@@ -28,8 +28,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb-crf-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc_train-crf-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb-crf-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc_train-crf-simple.ckpt',
             #         'model': 'crf_simple_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -40,8 +40,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb-crf-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc-crf-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb-crf-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc-crf-simple.ckpt',
             #         'model': 'crf_simple_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -52,8 +52,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter_train-crf-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter_train-crf-simple.ckpt',
             #         'model': 'crf_simple_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -64,8 +64,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter-crf-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter-crf-simple.ckpt',
             #         'model': 'crf_simple_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -76,8 +76,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_wsj_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-simple.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter_wsj_train-crf-simple.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-simple.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter_wsj_train-crf-simple.ckpt',
             #         'model': 'tdd_simple_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -89,7 +89,7 @@ class ExperimentTransferCrfTraining(Experiment):
             #     'train': {
             #         'dataset': 'gmb_dataset',
             #         'input_checkpoint': None,
-            #         'output_checkpoint': '../trained/transfer_crf/gmb-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb-crf-elmo.ckpt',
             #         'model': 'crf_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -100,8 +100,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb-crf-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc_train-crf-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc_train-crf-elmo.ckpt',
             #         'model': 'crf_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -112,8 +112,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'btc_dataset',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb-crf-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
             #         'model': 'crf_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -124,8 +124,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter_train-crf-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter_train-crf-elmo.ckpt',
             #         'model': 'crf_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -136,8 +136,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_dataset',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter-crf-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter-crf-elmo.ckpt',
             #         'model': 'crf_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,
@@ -148,8 +148,8 @@ class ExperimentTransferCrfTraining(Experiment):
             # {
             #     'train': {
             #         'dataset': 'ritter_wsj_dataset_train',
-            #         'input_checkpoint': '../trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
-            #         'output_checkpoint': '../trained/transfer_crf/gmb+btc+ritter_wsj_train-crf-elmo.ckpt',
+            #         'input_checkpoint': 'trained/transfer_crf/gmb+btc-crf-elmo.ckpt',
+            #         'output_checkpoint': 'trained/transfer_crf/gmb+btc+ritter_wsj_train-crf-elmo.ckpt',
             #         'model': 'tdd_elmo_embedding_model',
             #         'train': 'train_crf_output',
             #         'freeze_bi_lstm': False,

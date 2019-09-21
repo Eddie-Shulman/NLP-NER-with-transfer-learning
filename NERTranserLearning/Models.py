@@ -8,6 +8,7 @@ from keras.layers import LSTM, Embedding, Dense, TimeDistributed, Dropout, Bidir
 from keras import Model
 from keras_contrib.layers import CRF
 
+# the folder for TF cache hub, uncomment for a non default location
 os.environ['TFHUB_CACHE_DIR'] = 'D:\\Dev\\IntroToNLP_22933\\final\\NER Transfer Learning\\tf_cache'
 
 """

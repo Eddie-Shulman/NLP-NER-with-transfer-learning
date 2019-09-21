@@ -36,7 +36,7 @@ Helper methods to return complete, train or test data-sets
 
 def get_gmb_dataset(max_sentence_len):
 
-    DATASET_FILE = '../data/entity-annotated-corpus/ner_dataset.csv'
+    DATASET_FILE = 'data/entity-annotated-corpus/ner_dataset.csv'
 
     class SentenceGetter(object):
 
@@ -58,18 +58,21 @@ def get_gmb_dataset(max_sentence_len):
             except:
                 return None
 
+    print('start loading GMB data-set')
     data = pd.read_csv(DATASET_FILE, encoding="latin1")
     data = data.fillna(method="ffill")
 
     getter = SentenceGetter(data)
     sentences = getter.sentences
 
+    print('start tokenizing GMB data-set')
     tokenized_tag2idx = [[GMB_TAGS_2_TAGS[w[2].upper()] for w in s] for s in sentences]
     tokenized_padded_tag2idx = pad_sequences(maxlen=max_sentence_len, sequences=tokenized_tag2idx, padding="post", value=TAGS.index(PAD_TAG))
 
     tokenized_sentences = [[w[0] for w in s] for s in sentences]
     tokenized_padded_sentences = pad_sequences(maxlen=max_sentence_len, sequences=tokenized_sentences, padding="post", value=PAD_TAG, dtype=object)
 
+    print('GMB data-set loaded and tokenized')
     return tokenized_padded_tag2idx, tokenized_padded_sentences, sentences
 
 
@@ -190,9 +193,9 @@ def get_wsj_dataset(max_sentence_len):
     :param max_sentence_len:
     :return:
     """
-    DATASET_RAW_FILE = '../data/wsj_twitts/wsj_twitts_raw.json'
-    DATASET_FILE = '../data/wsj_twitts/wsj_twitts.json'
-    DATASET_CONLL_FILE = '../data/wsj_twitts/wsj_twitts.conll'
+    DATASET_RAW_FILE = 'data/wsj_twitts/wsj_twitts_raw.json'
+    DATASET_FILE = 'data/wsj_twitts/wsj_twitts.json'
+    DATASET_CONLL_FILE = 'data/wsj_twitts/wsj_twitts.conll'
 
     def raw_to_mini():
         with open(DATASET_RAW_FILE, encoding="utf8") as f:
