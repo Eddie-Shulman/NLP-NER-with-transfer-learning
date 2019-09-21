@@ -56,6 +56,7 @@ class Experiment(TrainingAnalyzer):
         :param model:
         :return:
         """
+        print('transform training data for TF input')
         tokenized_padded_tag2idx = [to_categorical(i, num_classes=tags_len) for i in tokenized_padded_tag2idx]
 
         y_tr = np.array(tokenized_padded_tag2idx)
@@ -67,6 +68,7 @@ class Experiment(TrainingAnalyzer):
         checkpoint_path = checkpoint_path_output
         cp_callback = keras.callbacks.ModelCheckpoint(checkpoint_path, save_weights_only=True, verbose=2)
 
+        print('start training')
         history = model.fit(X_tr, y_tr,
                             batch_size=self.MODEL_BATCH_SIZE, epochs=5, verbose=1, callbacks=[cp_callback])
         print(history.history)
@@ -94,6 +96,7 @@ class Experiment(TrainingAnalyzer):
                 os.mkdir('/'.join(train['output_checkpoint'].split('/')[:-1]))
 
             # create & train model
+            print('compile model and load weights if exists for training')
             if 'tdd_' in train['model']:
                 model = getattr(Models, 'get_%s' % train['model'])(
                     tf_session, TAGS, sentences, freeze_bi_lstm=train['freeze_bi_lstm'],
@@ -127,6 +130,7 @@ class Experiment(TrainingAnalyzer):
         if 'simple' in train['model']:
             tokenized_padded_sentences = self._simple_embedding_sentence_adapter(tokenized_padded_sentences)
 
+        print('compile model and load weights if exists for testing')
         if 'tdd_' in train['model']:
             model = getattr(Models, 'get_%s' % train['model'])(
                 tf_session, TAGS, sentences, tdd_layer_name='tdd_layer', tf_batch_size=128,
@@ -136,7 +140,9 @@ class Experiment(TrainingAnalyzer):
                 tf_session, TAGS, sentences, crf_layer_name='crf_layer', tf_batch_size=128,
                 max_sentence_len=50, model_checkpoint_path=train['output_checkpoint'])
 
+        print('run predict and collect results')
         results = self._predict(tf_batch_size=128, tokenized_padded_sentences=tokenized_padded_sentences, model=model)
+        print('analyze results and print F1 scores')
         f1_score, fq1_score_without_o = self._analyze_training(tf_batch_size=128,
                                                                tokenized_padded_tag2idx=tokenized_padded_tag2idx,
                                                                tags=TAGS, results=results)
